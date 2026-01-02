@@ -1,0 +1,232 @@
+/* =========================
+   GLOBAL
+========================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* =========================
+   LIGHT MODE 🌤️
+========================= */
+.light-mode {
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+    color: #000;
+}
+
+/* =========================
+   DARK MODE 🌙
+========================= */
+.dark-mode {
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+
+/* =========================
+   NAVBAR 🌈
+========================= */
+.navbar {
+    background: linear-gradient(
+        90deg,
+        #6a11cb,
+        #2575fc,
+        #43cea2
+    );
+    backdrop-filter: blur(12px);
+    transition: background 0.5s ease;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+}
+
+/* Hover underline animation */
+.navbar-nav .nav-link::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Dark mode navbar */
+.dark-mode .navbar {
+    background: linear-gradient(
+        90deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+    );
+}
+
+/* Toggle button */
+.navbar button {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.navbar button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   HOME / HERO SECTION
+========================= */
+.jumbotron {
+    height: 65vh;
+    margin-top: 70px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        270deg,
+        #6a11cb,
+        #2575fc,
+        #ff758c,
+        #43cea2
+    );
+    background-size: 800% 800%;
+    animation: gradientBG 12s ease infinite;
+
+    color: white;
+    border-radius: 0;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+h2 {
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    display: block;
+    margin: 10px auto;
+}
+
+/* =========================
+   ABOUT CARD (GLASS)
+========================= */
+#about .card {
+    width: 22rem;
+    border-radius: 20px;
+    border: none;
+    background: rgba(137, 70, 11, 0.3);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+.dark-mode #about .card {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+.card img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+#skills {
+    background: rgba(231, 139, 139, 0.6);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.dark-mode #skills {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.progress {
+    height: 18px;
+    border-radius: 20px;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+.contact-form {
+    max-width: 500px;
+    background: rgba(121, 193, 224, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.dark-mode .contact-form {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+input, textarea {
+    border-radius: 10px !important;
+}
+
+/* =========================
+   BUTTON EFFECTS
+========================= */
+.btn {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.dark-mode footer {
+    background: rgba(0, 0, 0, 0.6);
+}
